@@ -1,0 +1,59 @@
+name: Sprout
+options:
+  bundleIdPrefix: com.meteoroid
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: 9D73T83C47
+    CODE_SIGN_STYLE: Automatic
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  Sprout:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sprout
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.meteoroid.Sprout
+        TARGETED_DEVICE_FAMILY: "1,2"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "练习英语跟读和表达时需要录音，录音会发送给我们的服务器和你家长选择的语音服务进行评测。"
+        INFOPLIST_KEY_CFBundleDisplayName: Sprout
+  SproutTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.meteoroid.SproutTests
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: Sprout
+
+schemes:
+  Sprout:
+    build:
+      targets:
+        Sprout: all
+        SproutTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - SproutTests
+    archive:
+      config: Release
