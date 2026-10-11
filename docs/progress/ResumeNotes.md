@@ -4,7 +4,7 @@
 
 ## 当前状态（2026-10-11）
 
-- 仓库：`/Users/meteoroid/Projects/EnglishCheckInSwiftUI`，本地 Git，无远端。
+- 仓库：`/Users/meteoroid/Projects/SproutIOS`，本地 Git，无远端。
 - 已完成：docs 快照分发与链接重写、根 README/AGENTS、本记录文件。
 - 下一步：创建 Xcode 工程 → 设计系统十主题 tokens → 共用组件 → 契约模型/APIClient/模拟服务 → 录音/播放/持久化 → 页面 → 测试 → 构建与设备验证。
 - 权威文档：`docs/planning/` 与 `docs/standards/`，阅读顺序见根 AGENTS.md。

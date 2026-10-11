@@ -1,4 +1,4 @@
-# EnglishCheckInSwiftUI
+# SproutIOS
 
 英语练习打卡 App 的 SwiftUI 原生客户端仓库（iPhone / iPad），三仓库之一。另两仓库为 Python + FastAPI + LangGraph 后端与 uni-app x 跨端客户端，均不在本仓库内，本仓库不修改 MeteorVoice。
 
@@ -39,7 +39,7 @@ docs/planning/             # 产品、技术、事实、审阅、SwiftUI 实施�
 docs/standards/            # 项目与通用两规范同版快照
 docs/progress/             # 实施进度、验证证据、未完成项、断点续跑记录
 contracts/                 # EC-API-0.1 派生 fixture；canonical schema 待后端仓库发布
-EnglishCheckIn/            # App target 源码
+Sprout/                    # App target 源码
   App/                     # 组合根、生命周期
   Design/                  # 语义 tokens、十主题映射
   UI/Components/           # 共用 UI 组件（button/dialog/toast/form/list/card/recorder/feedback/calendar/reward）
@@ -53,8 +53,8 @@ Tests/                     # 单元测试（契约 fixture 断言、状态机、
 
 - 工具链：Xcode 26.3（Swift 6.2.4），macOS 26.7.1，MacBookPro16,2（Intel）
 - 最低系统：iOS 17.0（待用户确认；依据：@Observable / SwiftData 可用性与在保设备核对，见 docs/progress/）
-- 模拟器构建：`xcodebuild -project EnglishCheckIn.xcodeproj -scheme EnglishCheckIn -destination 'platform=iOS Simulator,name=iPhone 16' build`
-- 测试：`xcodebuild test -project EnglishCheckIn.xcodeproj -scheme EnglishCheckIn -destination 'platform=iOS Simulator,name=iPhone 16'`
+- 模拟器构建：`xcodebuild -project Sprout.xcodeproj -scheme Sprout -destination 'platform=iOS Simulator,name=iPhone 16' build`
+- 测试：`xcodebuild test -project Sprout.xcodeproj -scheme Sprout -destination 'platform=iOS Simulator,name=iPhone 16'`
 - 每次验证的实际命令、结果与证据见 [docs/progress/VerificationEvidence.md](docs/progress/VerificationEvidence.md)
 
 ## 边界（不做什么）
