@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C2A7D35A6E16E4FAD2D1632 /* PlaceholderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDD1AD61F9E0C4C9DCC1813 /* PlaceholderTests.swift */; };
+		0F5EBE491363F355B6650A77 /* ThemeCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00B5468C430308E9402E672 /* ThemeCatalogTests.swift */; };
 		31EB34B5EDA5AC3D3F9F187C /* ThemeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039648E09556A34ADA48E0A2 /* ThemeStore.swift */; };
 		3C294AF7BA96C32F18BAADAF /* RootContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242A82B04480D6A7E2416A50 /* RootContainerView.swift */; };
 		47E6111CE0D09FC6356232B4 /* DesignTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC9851B193189EF9B85F0F8 /* DesignTokens.swift */; };
 		5B4421D1E213D013923BC957 /* ThemeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B842D15427CC847AF1BADF /* ThemeFactory.swift */; };
+		648464BA42E0002A1974A4A3 /* ThemeStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC8C692234C8DFFA3460A6 /* ThemeStoreTests.swift */; };
 		6708F37413681A3C31A0A0D0 /* ThemeTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A2F4595DB28827F6CD4B8 /* ThemeTokens.swift */; };
 		880873F242EEF732CE0AD5B5 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510C72A95D2369A1D5607C2 /* Color+Hex.swift */; };
 		ACFB97923D9B2A032314C3D4 /* ThemeCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8D710B27B1C0608C544A9 /* ThemeCatalog.swift */; };
@@ -34,12 +35,13 @@
 		242A82B04480D6A7E2416A50 /* RootContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContainerView.swift; sourceTree = "<group>"; };
 		2510C72A95D2369A1D5607C2 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		2C4C2E16168B002690D9D9B9 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		3ABC8C692234C8DFFA3460A6 /* ThemeStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeStoreTests.swift; sourceTree = "<group>"; };
 		814A2F4595DB28827F6CD4B8 /* ThemeTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTokens.swift; sourceTree = "<group>"; };
 		A1FE3642753661630AB2BB3C /* Sprout.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Sprout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E8D710B27B1C0608C544A9 /* ThemeCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCatalog.swift; sourceTree = "<group>"; };
+		D00B5468C430308E9402E672 /* ThemeCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCatalogTests.swift; sourceTree = "<group>"; };
 		DBC4E27CF6551F4FD10A6321 /* SproutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SproutApp.swift; sourceTree = "<group>"; };
 		EA1132B5A3BF1C3FD2E869B8 /* SproutTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SproutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EDDD1AD61F9E0C4C9DCC1813 /* PlaceholderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderTests.swift; sourceTree = "<group>"; };
 		F6B842D15427CC847AF1BADF /* ThemeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFactory.swift; sourceTree = "<group>"; };
 		FDC9851B193189EF9B85F0F8 /* DesignTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,7 +63,8 @@
 		2127EA4CFCB6B0D10FC2650B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				EDDD1AD61F9E0C4C9DCC1813 /* PlaceholderTests.swift */,
+				D00B5468C430308E9402E672 /* ThemeCatalogTests.swift */,
+				3ABC8C692234C8DFFA3460A6 /* ThemeStoreTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -193,7 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C2A7D35A6E16E4FAD2D1632 /* PlaceholderTests.swift in Sources */,
+				0F5EBE491363F355B6650A77 /* ThemeCatalogTests.swift in Sources */,
+				648464BA42E0002A1974A4A3 /* ThemeStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
