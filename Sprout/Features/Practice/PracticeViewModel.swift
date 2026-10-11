@@ -5,18 +5,6 @@ import CryptoKit
 import Foundation
 
 
-/// 离线打卡的队列载荷；契约未冻结期间以 JSON 透传，重放时按字段重建请求。
-private struct PendingCheckInPayload: Codable {
-    let childId: String
-    let planId: String
-    let targetDate: BusinessDate
-    let clientCompletionId: UUID
-    let clientCompletedAt: Date
-    let planRevision: Int
-    let itemOutcomes: [ItemOutcome]
-}
-
-
 /// 练习流程的后端调用集合：上传与建尝试、组装题目结果、打卡与离线入队。
 private struct PracticeBackendGateway {
     let backend: any BackendService

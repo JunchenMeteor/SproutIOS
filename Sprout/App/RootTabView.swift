@@ -14,6 +14,15 @@ struct RootTabView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(theme.page)
             .safeAreaInset(edge: .top, spacing: 0) { mockBanner }
+            .task { await drainOfflineQueue() }
+    }
+
+    /* 启动后重放一次离线队列。账号 id 用常量 "local-dev-account"：
+       localStore.childProfileDraft 尚无账号概念，登录方式未定，这是本机开发身份。
+       占位：联网恢复钩子（Reachability/Network 框架）首版不接入，
+       后续在此注册网络恢复回调，再次调用 drainPending。 */
+    private func drainOfflineQueue() async {
+        await environment.syncCoordinator.drainPending(forAccount: "local-dev-account")
     }
 
     @ViewBuilder

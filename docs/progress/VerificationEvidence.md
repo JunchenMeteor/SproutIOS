@@ -16,9 +16,10 @@
 | 日期 | 命令 | 结果 | 覆盖 |
 | --- | --- | --- | --- |
 | 2026-10-11 | `xcodebuild test ... name=iPhone 16,OS=18.5` | TEST SUCCEEDED，11/11 通过 | ThemeCatalogTests 7 项（十主题 ID/基础色/主按钮规则/领域组合/状态色/scrim）、ThemeStoreTests 4 项（默认值/持久化/system 跟随/脏数据回退） |
+| 2026-10-11 | 同上（全量） | TEST SUCCEEDED，62/62 通过 | 新增 51 项：BusinessDate 10、契约枚举 unknown 降级 9、fixture 解码语义 9、录音状态机 10、离线队列 8、LocalStore 5。修复 OfflineQueue ISO-8601 亚秒精度往返丢失（测试暴露的真实 bug） |
 
 ## 真机 / 模拟器
 
 - 模拟器：iPhone 16（iOS 18.5）构建与测试通过（见上）；iPhone 16 模拟器安装并启动成功，家长设置首屏渲染正确（主题 SkyLight、模拟服务横幅显示）【设备真实-模拟器】。
-- iPad Pro 13-inch (M4)（iOS 18.5）构建通过，安装运行验证进行中。
+- iPad Pro 13-inch (M4)（iOS 18.5）：构建通过、安装启动成功、首屏渲染正确【设备真实-模拟器】。
 - 真机：iPhone 15 Pro（iOS 27.0.1）已配对；构建因 Xcode 无 Apple 账户会话被签名阻塞（见上表），待用户登录 Xcode → Settings → Accounts 后继续。iPhone 14 与 iPad A1876 未接入。

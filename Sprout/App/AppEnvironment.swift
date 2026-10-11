@@ -13,6 +13,8 @@ final class AppEnvironment {
     let localStore: LocalStore
     let recordingFiles: RecordingFileStore
     let offlineQueue: OfflineQueue
+    /// 离线队列的联网恢复编排器。
+    let syncCoordinator: SyncCoordinator
     /// 当前后端是否为模拟服务。为 true 时界面必须持续标注"模拟服务"。
     let isMockBackend: Bool
 
@@ -24,6 +26,7 @@ final class AppEnvironment {
         localStore: LocalStore,
         recordingFiles: RecordingFileStore,
         offlineQueue: OfflineQueue,
+        syncCoordinator: SyncCoordinator,
         isMockBackend: Bool
     ) {
         self.themeStore = themeStore
@@ -33,6 +36,7 @@ final class AppEnvironment {
         self.localStore = localStore
         self.recordingFiles = recordingFiles
         self.offlineQueue = offlineQueue
+        self.syncCoordinator = syncCoordinator
         self.isMockBackend = isMockBackend
     }
 
@@ -42,14 +46,16 @@ final class AppEnvironment {
     @MainActor
     static func makeDefault() -> AppEnvironment {
         let stores = makeStores()
+        let backend = MockBackendService()
         return AppEnvironment(
             themeStore: ThemeStore(),
-            backend: MockBackendService(),
+            backend: backend,
             recorder: AudioRecorderService(fileStore: stores.recordingFiles),
             player: AudioPlayerService(),
             localStore: stores.localStore,
             recordingFiles: stores.recordingFiles,
             offlineQueue: stores.offlineQueue,
+            syncCoordinator: SyncCoordinator(queue: stores.offlineQueue, backend: backend),
             isMockBackend: true
         )
     }
