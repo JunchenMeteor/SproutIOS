@@ -35,6 +35,20 @@
                ReferencedContainer = "container:Sprout.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "74796BCF630DF2307F5AF816"
+               BuildableName = "SproutUITests.xctest"
+               BlueprintName = "SproutUITests"
+               ReferencedContainer = "container:Sprout.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -61,6 +75,17 @@
                BlueprintIdentifier = "00AB10705A8E5E4FCB6934A7"
                BuildableName = "SproutTests.xctest"
                BlueprintName = "SproutTests"
+               ReferencedContainer = "container:Sprout.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "74796BCF630DF2307F5AF816"
+               BuildableName = "SproutUITests.xctest"
+               BlueprintName = "SproutUITests"
                ReferencedContainer = "container:Sprout.xcodeproj">
             </BuildableReference>
          </TestableReference>

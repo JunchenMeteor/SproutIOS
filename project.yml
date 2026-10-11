@@ -46,6 +46,17 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
     dependencies:
       - target: Sprout
+  SproutUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: UITests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.meteoroid.SproutUITests
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: Sprout
 
 schemes:
   Sprout:
@@ -53,11 +64,13 @@ schemes:
       targets:
         Sprout: all
         SproutTests: [test]
+        SproutUITests: [test]
     run:
       config: Debug
     test:
       config: Debug
       targets:
         - SproutTests
+        - SproutUITests
     archive:
       config: Release

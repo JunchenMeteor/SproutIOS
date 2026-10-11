@@ -8,6 +8,7 @@
 /// 取舍：实体少且写入低频，选用单一大文件换实体间一致快照，
 /// 避免多文件方案中部分写失败造成的草稿与快照互相矛盾。
 import Foundation
+import Observation
 
 /// 家长首次设置草稿。
 struct ChildProfileDraft: Codable, Equatable {
@@ -85,6 +86,9 @@ private struct PersistedState: Codable {
 }
 
 
+/// 本机状态门面。标注 @Observable：RootTabView 依赖 hasCompletedOnboarding
+/// 在家长设置完成后即时切换到主 tab，读写经 persisted 自动纳入观察。
+@Observable
 final class LocalStore {
     /// 计划快照字典 key 由 childId 与 targetDate 组成，天然支持切账号/多孩子隔离。
     static func planSnapshotKey(childId: String, targetDate: String) -> String {

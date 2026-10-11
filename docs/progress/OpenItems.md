@@ -16,8 +16,11 @@
 ## 客户端范围内未完成
 
 - iPhone 14、iPad A1876 真机未接入：录音/中断/离线/布局未在这两台验证。
-- 行数/空行 custom checker 未实现（规范要求 tokenizer/AST 口径）：当前人工遵守，未自动门禁。
+- 行数/空行 custom checker 未实现（规范要求 tokenizer/AST 口径）：当前人工遵守 + 子任务脚本自检，未自动门禁。
 - 十主题×主要组件状态的 UI 逐项验收未做（数学配色不代替 UI）。
+- 离线编排缺口：uploadAudio/createAttempt 的 PendingOperation 载荷未入队、重放编排未建（SyncCoordinator 只对 checkIn 重放；multipart 上传待真实后端联调）。
+- 账号口径缺口：SyncCoordinator drain 用常量 "local-dev-account"，练习页入队用 plan.childId，登录体系落地后必须对齐，否则离线条目不会被正确 drain。
+- 无网络监听：联网恢复触发靠 RootTabView 启动时一次 drain + 占位注释，待接 Network 框架。
 
 ## 明确不做
 

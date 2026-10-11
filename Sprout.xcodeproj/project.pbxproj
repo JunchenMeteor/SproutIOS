@@ -45,6 +45,7 @@
 		80018F5CED1C0015484FC0B6 /* MockServiceBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046935627D3204A639E3482A /* MockServiceBanner.swift */; };
 		880873F242EEF732CE0AD5B5 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510C72A95D2369A1D5607C2 /* Color+Hex.swift */; };
 		88D24BBC3BA65ADAA70C9CA3 /* AppSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653A7308CB7ED7821F8CF08 /* AppSheet.swift */; };
+		8A75F185C026F1DF37787DC6 /* SproutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C0DF5BF01EEE0275F248CD /* SproutUITests.swift */; };
 		8DDD2A2F0576FEBF70D6ECAE /* OfflineQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A52FD21AE9C068B60BA5DF7 /* OfflineQueueTests.swift */; };
 		9881FBB28EFC5EE1E3CD5C0F /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D90D3EB86C8F8010BCB2896 /* Plan.swift */; };
 		A015BC67980A061110CDE26C /* SyncCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA163F225BD83E25849BE05 /* SyncCoordinatorTests.swift */; };
@@ -82,6 +83,13 @@
 			remoteGlobalIDString = A0A478F3AEF1FB11D68C21A5;
 			remoteInfo = Sprout;
 		};
+		2C5D6BF43788C32AE161E8DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0005D624A6935E83D7CF28A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0A478F3AEF1FB11D68C21A5;
+			remoteInfo = Sprout;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +117,7 @@
 		5EF2CCD6726FD37ADC5DB793 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		673F029902127FD67E5A48D0 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
 		6D90D3EB86C8F8010BCB2896 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		74C0DF5BF01EEE0275F248CD /* SproutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SproutUITests.swift; sourceTree = "<group>"; };
 		7ECDA2B0711D35BE820F95D8 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		814A2F4595DB28827F6CD4B8 /* ThemeTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTokens.swift; sourceTree = "<group>"; };
 		8312D44FB1D2D07E63875339 /* ClientContextProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientContextProvider.swift; sourceTree = "<group>"; };
@@ -121,6 +130,7 @@
 		B715CCDB5AC46A2CE1C6F0A7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		B72BCF7CF1A67E310934B7D0 /* RecordingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingState.swift; sourceTree = "<group>"; };
 		BBC27F721BDE4D0F5969B948 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
+		BC792221F45F26AEC7DDF7FD /* SproutUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SproutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C169F3A2732BD6C7DFC2444F /* RecordingFileStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingFileStore.swift; sourceTree = "<group>"; };
 		C1E8D710B27B1C0608C544A9 /* ThemeCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCatalog.swift; sourceTree = "<group>"; };
 		C23375BBDBAD5D2023D51668 /* FixtureDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureDecodingTests.swift; sourceTree = "<group>"; };
@@ -270,6 +280,7 @@
 				145448A3460F5DEBA8C20E9C /* contracts */,
 				7C7841C8CBE3F35C43ADC516 /* Sprout */,
 				2127EA4CFCB6B0D10FC2650B /* Tests */,
+				BDE3C32EEF4062FD93685236 /* UITests */,
 				A3C8C0699A644DD9E48CC7CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -326,6 +337,7 @@
 			children = (
 				A1FE3642753661630AB2BB3C /* Sprout.app */,
 				EA1132B5A3BF1C3FD2E869B8 /* SproutTests.xctest */,
+				BC792221F45F26AEC7DDF7FD /* SproutUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -352,6 +364,14 @@
 				DBC4E27CF6551F4FD10A6321 /* SproutApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		BDE3C32EEF4062FD93685236 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				74C0DF5BF01EEE0275F248CD /* SproutUITests.swift */,
+			);
+			path = UITests;
 			sourceTree = "<group>";
 		};
 		CEAC242FA2726483C35A2884 /* Components */ = {
@@ -393,6 +413,24 @@
 			productReference = EA1132B5A3BF1C3FD2E869B8 /* SproutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		74796BCF630DF2307F5AF816 /* SproutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69240987A3D053A4DBC18C87 /* Build configuration list for PBXNativeTarget "SproutUITests" */;
+			buildPhases = (
+				50087A7F1431ACC25774EADE /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3B572C0CCCDE784201401A3 /* PBXTargetDependency */,
+			);
+			name = SproutUITests;
+			packageProductDependencies = (
+			);
+			productName = SproutUITests;
+			productReference = BC792221F45F26AEC7DDF7FD /* SproutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A0A478F3AEF1FB11D68C21A5 /* Sprout */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A3DBF56E848E02A3E7C4439 /* Build configuration list for PBXNativeTarget "Sprout" */;
@@ -424,6 +462,11 @@
 						DevelopmentTeam = 9D73T83C47;
 						ProvisioningStyle = Automatic;
 					};
+					74796BCF630DF2307F5AF816 = {
+						DevelopmentTeam = 9D73T83C47;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A0A478F3AEF1FB11D68C21A5;
+					};
 					A0A478F3AEF1FB11D68C21A5 = {
 						DevelopmentTeam = 9D73T83C47;
 						ProvisioningStyle = Automatic;
@@ -446,6 +489,7 @@
 			targets = (
 				A0A478F3AEF1FB11D68C21A5 /* Sprout */,
 				00AB10705A8E5E4FCB6934A7 /* SproutTests */,
+				74796BCF630DF2307F5AF816 /* SproutUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -462,6 +506,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		50087A7F1431ACC25774EADE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A75F185C026F1DF37787DC6 /* SproutUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8783FE2C1C42A8ED6FCB4D53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -548,6 +600,11 @@
 			target = A0A478F3AEF1FB11D68C21A5 /* Sprout */;
 			targetProxy = 2030814BF1682CBD6ABCD7DC /* PBXContainerItemProxy */;
 		};
+		B3B572C0CCCDE784201401A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0A478F3AEF1FB11D68C21A5 /* Sprout */;
+			targetProxy = 2C5D6BF43788C32AE161E8DB /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -567,6 +624,23 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sprout.app/Sprout";
 			};
 			name = Release;
+		};
+		222E029BB33C7D3C1AC1AF8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.meteoroid.SproutUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sprout;
+			};
+			name = Debug;
 		};
 		48F95876F0C2B21DE08AB1FF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -758,6 +832,23 @@
 			};
 			name = Release;
 		};
+		EB6B356F1CE07A81FA6662D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.meteoroid.SproutUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sprout;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -766,6 +857,15 @@
 			buildConfigurations = (
 				9653F4D3CADEA1C5253CDFB1 /* Debug */,
 				48F95876F0C2B21DE08AB1FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		69240987A3D053A4DBC18C87 /* Build configuration list for PBXNativeTarget "SproutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				222E029BB33C7D3C1AC1AF8C /* Debug */,
+				EB6B356F1CE07A81FA6662D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

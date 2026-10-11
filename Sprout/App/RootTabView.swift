@@ -36,7 +36,10 @@ struct RootTabView: View {
 
     private var mainTabs: some View {
         TabView {
-            TodayView()
+            /* TodayView 的 navigationDestination 需要栈祖先，否则「开始练习」无法 push。 */
+            NavigationStack {
+                TodayView()
+            }
                 .tabItem { Label("今天", systemImage: "sun.max") }
             CalendarView()
                 .tabItem { Label("日历", systemImage: "calendar") }
