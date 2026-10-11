@@ -133,10 +133,21 @@ final class OfflineQueue {
         try persistNow()
     }
 
+    /* ISO-8601 带小数秒，避免 createdAt 持久化往返丢亚秒精度；
+       解码兼容早期无小数秒格式。 */
+    private static let iso8601Fractional: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
+
     private func persistNow() throws {
         let encoder = JSONEncoder()
         encoder.outputFormatting = [.sortedKeys]
-        encoder.dateEncodingStrategy = .iso8601
+        encoder.dateEncodingStrategy = .custom { date, encoder in
+            var container = encoder.singleValueContainer()
+            try container.encode(Self.iso8601Fractional.string(from: date))
+        }
         let data = try encoder.encode(operations)
         try data.write(to: fileURL, options: .atomic)
     }
@@ -147,7 +158,20 @@ final class OfflineQueue {
         }
         do {
             let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = .iso8601
+            decoder.dateDecodingStrategy = .custom { container in
+                let text = try container.singleValueContainer().decode(String.self)
+                if let date = iso8601Fractional.date(from: text) {
+                    return date
+                }
+                let plain = ISO8601DateFormatter()
+                plain.formatOptions = [.withInternetDateTime]
+                if let date = plain.date(from: text) {
+                    return date
+                }
+                throw DecodingError.dataCorruptedError(
+                    in: try container.singleValueContainer(),
+                    debugDescription: "非法 ISO-8601 时间: \(text)")
+            }
             return try decoder.decode([PendingOperation].self, from: Data(contentsOf: fileURL))
         } catch {
             throw OfflineQueueError.corruptedState(underlying: error)

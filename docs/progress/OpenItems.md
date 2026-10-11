@@ -7,7 +7,7 @@
 | 项 | 影响 | 当前处理 |
 | --- | --- | --- |
 | 最低 iOS/iPadOS 版本确认 | deployment target | 暂定 iOS 17.0，可构建验证，待确认 |
-| 签名团队/方式 | 真机安装 | 待核对 Xcode 账户；不行则仅模拟器验证并记录 |
+| **Xcode 无 Apple 账户会话（真机签名阻塞）** | 真机构建/安装 | 2026-10-11 实测：钥匙串有两个 Apple Development 证书（9D73T83C47 / G487E5BD5B），但两个 Team 均无 Xcode 账户登录会话，-allowProvisioningUpdates 报 "No Account for Team"；本机 4 个 mobileprovision 全部 2022 年过期且属其他 Team/应用。**需要用户在 Xcode → Settings → Accounts 登录 Apple ID 后告知，即可继续真机验证** |
 | 清华版教材准确版本/ISBN/课次/素材许可 | 真实课程内容 | 仅用原创演示 fixture，明确标注 |
 | 家长登录/账号恢复方式 | 真实联调 | 仅本机开发身份（Debug 模拟），不上线 |
 | 云端 STT/专业评测/TTS 供应商与凭据 | 阶段 3 | 不接，模拟服务标注 |
