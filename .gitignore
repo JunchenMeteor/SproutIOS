@@ -1,0 +1,15 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+
+# macOS
+.DS_Store
+
+# 敏感与本地证据（不进 Git）
+*.m4a
+*.aac
+secrets/
+evidence-local/
