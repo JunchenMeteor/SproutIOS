@@ -1,0 +1,35 @@
+{
+  "parentSummary": {
+    "id": "9a1b2c3d-0001-4000-8000-000000000001",
+    "displayName": "演示家长"
+  },
+  "children": [
+    {
+      "id": "9a1b2c3d-0002-4000-8000-000000000002",
+      "displayName": "小豆",
+      "revision": 1,
+      "timezone": "Asia/Shanghai",
+      "retentionPolicy": "standard"
+    }
+  ],
+  "configuration": {
+    "timezone": "Asia/Shanghai",
+    "audioLimits": {
+      "maxSeconds": 60,
+      "maxBytes": 5242880,
+      "formats": ["m4a", "aac", "wav"]
+    },
+    "idempotencyRetentionSeconds": 604800,
+    "makeupPolicy": {
+      "allowedDaysBack": 7
+    },
+    "rewardRuleVersion": "reward-demo-1"
+  },
+  "capabilities": {
+    "stt": true,
+    "pronunciation": true,
+    "tts": true,
+    "report": true
+  },
+  "syncCursor": "cursor-demo-20261011"
+}

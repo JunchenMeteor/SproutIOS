@@ -1,0 +1,45 @@
+{
+  "id": "9a1b2c3d-0040-4000-8000-000000000040",
+  "attemptId": "9a1b2c3d-0030-4000-8000-000000000030",
+  "status": "succeeded",
+  "components": {
+    "stt": {
+      "status": "succeeded",
+      "retryable": false,
+      "provider": "demo-stt",
+      "sttResult": {
+        "providerTranscript": "Good morning, teacher!",
+        "transcriptSource": "provider",
+        "transcriptRevision": 1,
+        "quality": "usable",
+        "confidence": 0.93
+      }
+    },
+    "grammar": {
+      "status": "succeeded",
+      "retryable": false,
+      "provider": "demo-grammar",
+      "grammarResult": {
+        "originalText": "Good morning, teacher!",
+        "childTip": "这句话说得又清楚又有礼貌！",
+        "encouragement": "太棒了，继续保持！"
+      }
+    },
+    "pronunciation": {
+      "status": "succeeded",
+      "retryable": false,
+      "provider": "demo-pronunciation",
+      "pronunciationResult": {
+        "providerScale": "0-100",
+        "providerScore": 88.5,
+        "wordDetails": ["morning 发音清晰", "teacher 尾音可以再饱满一点"],
+        "evidenceAvailable": true
+      }
+    }
+  },
+  "feedback": {
+    "childTip": "今天的跟读很清楚！",
+    "encouragement": "明天再来挑战一句新的吧！",
+    "parentDetails": "演示反馈：转写、语法与发音组件均成功。"
+  }
+}

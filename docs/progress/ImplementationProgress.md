@@ -28,3 +28,5 @@
 ## 完成清单（随提交更新）
 
 - 2026-10-11：仓库骨架、8 份权威文档同版快照分发与链接重写、根 README/AGENTS、git 初始化。【工程】
+- 2026-10-11：仓库按用户决定更名 SproutIOS（App 名 Sprout，中性命名不含坦克/打卡含义）；xcodegen 2.46.0 生成 Xcode 工程，Xcode 26.3 + iOS 18.5 模拟器构建通过；签名身份 Apple Development: Pengyu Qi（TeamID 9D73T83C47）已在钥匙串，真机签名待实际构建验证。【工程/设备真实】
+- 2026-10-11：设计系统完成——十主题完整语义 tokens（ThemeTokens/ThemeCatalog/ThemeFactory，色值忠实映射规范第 6 节）、ThemeStore（本设备 UserDefaults 持久化 group/mode、system 跟随外观）、排版/间距/圆角 token；主题测试 11 项全部通过（iPhone 16 模拟器，iOS 18.5）。【工程】

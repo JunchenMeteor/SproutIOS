@@ -1,7 +1,7 @@
 /// 根容器视图。
 /// 负责把系统外观与主题选择解析为当前 ThemeTokens 并注入环境，
-/// 使已打开的弹层/toast 等订阅同一主题并即时切换。
-/// 页面骨架在 Features 下逐步替换本占位内容。
+/// 使已打开的弹层/toast 等订阅同一主题并即时切换；
+/// 业务导航骨架为 RootTabView（首次设置分流在其内部）。
 import SwiftUI
 
 struct RootContainerView: View {
@@ -10,11 +10,18 @@ struct RootContainerView: View {
 
     var body: some View {
         let theme = themeStore.currentTheme(systemScheme: systemScheme)
-        Text("Sprout")
-            .font(AppFont.title)
-            .foregroundStyle(theme.textPrimary)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        RootTabView()
             .background(theme.page)
             .environment(\.theme, theme)
+            .preferredColorScheme(preferredScheme)
+    }
+
+    /// 显式 light/dark 模式时锁定应用外观；system 时跟随设备。
+    private var preferredScheme: ColorScheme? {
+        switch themeStore.mode {
+        case .system: return nil
+        case .light: return .light
+        case .dark: return .dark
+        }
     }
 }

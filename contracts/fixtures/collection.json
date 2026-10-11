@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": "9a1b2c3d-0080-4000-8000-000000000080",
+      "kind": "tank",
+      "unlocked": true,
+      "unlockedAt": "2026-10-06T12:00:00Z",
+      "ruleVersion": "reward-demo-1",
+      "title": "小豆的英语水族箱",
+      "assetId": "asset-demo-tank",
+      "historySourceUrls": []
+    },
+    {
+      "id": "9a1b2c3d-0081-4000-8000-000000000081",
+      "kind": "part",
+      "unlocked": true,
+      "unlockedAt": "2026-10-10T12:30:00Z",
+      "sourceTargetDate": "2026-10-10",
+      "ruleVersion": "reward-demo-1",
+      "title": "小树苗的绿叶",
+      "assetId": "asset-demo-leaf",
+      "historySourceUrls": []
+    },
+    {
+      "id": "9a1b2c3d-0082-4000-8000-000000000082",
+      "kind": "part",
+      "unlocked": false,
+      "ruleVersion": "reward-demo-1",
+      "title": "小树苗的花朵",
+      "historySourceUrls": []
+    },
+    {
+      "id": "9a1b2c3d-0083-4000-8000-000000000083",
+      "kind": "badge",
+      "unlocked": false,
+      "ruleVersion": "reward-demo-1",
+      "title": "晨读小达人",
+      "historySourceUrls": []
+    },
+    {
+      "id": "9a1b2c3d-0084-4000-8000-000000000084",
+      "kind": "decoration",
+      "unlocked": true,
+      "unlockedAt": "2026-10-08T13:00:00Z",
+      "sourceTargetDate": "2026-10-08",
+      "ruleVersion": "reward-demo-1",
+      "title": "水族箱的小石子",
+      "assetId": "asset-demo-stone",
+      "historySourceUrls": []
+    }
+  ],
+  "nextMilestone": {
+    "title": "再打卡 4 天解锁新装饰",
+    "requiredDates": 7,
+    "currentDates": 3
+  },
+  "revision": 2
+}

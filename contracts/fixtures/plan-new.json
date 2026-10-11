@@ -1,0 +1,47 @@
+{
+  "id": "9a1b2c3d-0010-4000-8000-000000000010",
+  "childId": "9a1b2c3d-0002-4000-8000-000000000002",
+  "targetDate": "2026-10-11",
+  "revision": 1,
+  "dayMode": "new",
+  "courseEditionId": "course-demo-starter",
+  "contentVersion": "demo-content-1",
+  "progressRevision": 1,
+  "estimatedSeconds": 240,
+  "items": [
+    {
+      "id": "9a1b2c3d-0020-4000-8000-000000000020",
+      "type": "repeat",
+      "knowledgePointIds": ["kp-demo-greeting"],
+      "referenceText": "Good morning, teacher!",
+      "prompt": "跟读：早上好，老师！",
+      "suggestedSeconds": 30,
+      "required": true
+    },
+    {
+      "id": "9a1b2c3d-0021-4000-8000-000000000021",
+      "type": "repeat",
+      "knowledgePointIds": ["kp-demo-color"],
+      "referenceText": "The sky is blue today.",
+      "prompt": "跟读：今天的天空是蓝色的。",
+      "suggestedSeconds": 30,
+      "required": true
+    },
+    {
+      "id": "9a1b2c3d-0022-4000-8000-000000000022",
+      "type": "freeExpression",
+      "knowledgePointIds": ["kp-demo-greeting", "kp-demo-color"],
+      "prompt": "用英语说一说你今天看到的颜色。",
+      "suggestedSeconds": 60,
+      "required": false
+    }
+  ],
+  "completionPolicy": {
+    "requiredItemIds": [
+      "9a1b2c3d-0020-4000-8000-000000000020",
+      "9a1b2c3d-0021-4000-8000-000000000021"
+    ],
+    "allowedSkipReasons": ["micUnavailable", "tooDifficult"],
+    "ruleVersion": "completion-demo-1"
+  }
+}

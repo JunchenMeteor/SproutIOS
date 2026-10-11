@@ -1,0 +1,29 @@
+{
+  "id": "9a1b2c3d-0042-4000-8000-000000000042",
+  "attemptId": "9a1b2c3d-0030-4000-8000-000000000030",
+  "status": "partial",
+  "components": {
+    "stt": {
+      "status": "succeeded",
+      "retryable": true,
+      "provider": "demo-stt",
+      "sttResult": {
+        "providerTranscript": "",
+        "transcriptSource": "provider",
+        "transcriptRevision": 1,
+        "quality": "insufficient",
+        "confidence": null
+      }
+    },
+    "grammar": {
+      "status": "skipped",
+      "reasonCode": "TRANSCRIPT_INSUFFICIENT",
+      "retryable": false
+    },
+    "pronunciation": {
+      "status": "skipped",
+      "reasonCode": "TRANSCRIPT_INSUFFICIENT",
+      "retryable": false
+    }
+  }
+}

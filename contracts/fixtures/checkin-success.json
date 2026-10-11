@@ -1,0 +1,27 @@
+{
+  "checkIn": {
+    "id": "9a1b2c3d-0060-4000-8000-000000000060",
+    "targetDate": "2026-10-11",
+    "clientCompletedAt": "2026-10-11T09:05:00Z",
+    "confirmedAt": "2026-10-11T09:05:02Z",
+    "isMakeup": false,
+    "feedbackPending": false,
+    "revision": 1
+  },
+  "calendarSummary": {
+    "todayCheckedIn": true,
+    "uniqueCompletedDates": 5,
+    "currentStreak": 3,
+    "longestStreak": 4
+  },
+  "rewardGrants": [
+    {
+      "id": "9a1b2c3d-0070-4000-8000-000000000070",
+      "kind": "part",
+      "title": "小树苗的新叶子",
+      "sourceTargetDate": "2026-10-11",
+      "ruleVersion": "reward-demo-1"
+    }
+  ],
+  "collectionRevision": 2
+}

@@ -1,0 +1,39 @@
+{
+  "id": "9a1b2c3d-0011-4000-8000-000000000011",
+  "childId": "9a1b2c3d-0002-4000-8000-000000000002",
+  "targetDate": "2026-10-11",
+  "revision": 1,
+  "dayMode": "review",
+  "courseEditionId": "course-demo-starter",
+  "contentVersion": "demo-content-1",
+  "progressRevision": 1,
+  "estimatedSeconds": 120,
+  "items": [
+    {
+      "id": "9a1b2c3d-0025-4000-8000-000000000025",
+      "type": "repeat",
+      "knowledgePointIds": ["kp-demo-number"],
+      "referenceText": "I can count to ten.",
+      "prompt": "复习跟读：我能数到十。",
+      "suggestedSeconds": 30,
+      "required": true
+    },
+    {
+      "id": "9a1b2c3d-0026-4000-8000-000000000026",
+      "type": "repeat",
+      "knowledgePointIds": ["kp-demo-thanks"],
+      "referenceText": "Thank you very much.",
+      "prompt": "复习跟读：非常感谢你。",
+      "suggestedSeconds": 30,
+      "required": true
+    }
+  ],
+  "completionPolicy": {
+    "requiredItemIds": [
+      "9a1b2c3d-0025-4000-8000-000000000025",
+      "9a1b2c3d-0026-4000-8000-000000000026"
+    ],
+    "allowedSkipReasons": ["micUnavailable", "tooDifficult"],
+    "ruleVersion": "completion-demo-1"
+  }
+}

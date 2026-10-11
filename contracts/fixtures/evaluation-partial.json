@@ -1,0 +1,36 @@
+{
+  "id": "9a1b2c3d-0041-4000-8000-000000000041",
+  "attemptId": "9a1b2c3d-0030-4000-8000-000000000030",
+  "status": "partial",
+  "components": {
+    "stt": {
+      "status": "succeeded",
+      "retryable": false,
+      "provider": "demo-stt",
+      "sttResult": {
+        "providerTranscript": "Good morning, teacher!",
+        "transcriptSource": "provider",
+        "transcriptRevision": 1,
+        "quality": "usable",
+        "confidence": 0.9
+      }
+    },
+    "grammar": {
+      "status": "succeeded",
+      "retryable": false,
+      "provider": "demo-grammar",
+      "grammarResult": {
+        "originalText": "Good morning, teacher!",
+        "childTip": "这句话说得又清楚又有礼貌！",
+        "encouragement": "太棒了，继续保持！"
+      }
+    },
+    "pronunciation": {
+      "status": "failed",
+      "reasonCode": "PROVIDER_TIMEOUT",
+      "retryable": true,
+      "provider": "demo-pronunciation"
+    }
+  },
+  "nextPollAfterMs": 1500
+}

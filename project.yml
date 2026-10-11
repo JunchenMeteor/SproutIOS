@@ -19,6 +19,10 @@ targets:
     platform: iOS
     sources:
       - path: Sprout
+      - path: contracts/fixtures
+        name: fixtures
+        type: folder
+        buildPhase: resources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.meteoroid.Sprout

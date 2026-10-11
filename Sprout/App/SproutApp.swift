@@ -5,7 +5,14 @@ import SwiftUI
 
 @main
 struct SproutApp: App {
-    @State private var environment = AppEnvironment.makeDefault()
+    /// 组合根在主 actor 创建（录音/播放 adapter 的隔离要求）；App 初始化在主线程运行。
+    @State private var environment: AppEnvironment
+
+    init() {
+        _environment = State(wrappedValue: MainActor.assumeIsolated {
+            AppEnvironment.makeDefault()
+        })
+    }
 
     var body: some Scene {
         WindowGroup {
