@@ -34,3 +34,4 @@
 - 2026-10-11：62 项单元测试全绿（fixture 语义断言、状态机转移表、离线队列幂等/隔离、持久化往返）；修复 OfflineQueue ISO-8601 亚秒精度丢失。【工程】
 - 2026-10-11：SyncCoordinator 离线联网恢复编排（按序重放、沿用幂等键、可重试停止本轮、不可重试列人工处理）+ 6 项测试。【工程】
 - 2026-10-11：UI 冒烟测试 3/3 通过（家长设置→今日→复习计划→练习页；tab 切换）；UI 测试暴露并修复两个真实缺陷：LocalStore 缺 @Observable 导致 onboarding 后不刷新、今日 tab 缺 NavigationStack 导致无法导航。总计 71 项测试全绿。【设备真实-模拟器】【模拟服务】
+- 2026-10-31：今日页新增页首层级（小标签「今日练习」+ 标题「今天练什么？」+ 一行约定「每天 10 分钟 · 只鼓励，不打分」），与跨端 Web 版同一信息层级；只复用 theme.textPrimary/textSecondary 与 AppFont/AppSpacing token。**【未验证】** 本机为 Windows，无 Xcode，未编译未运行，待在 Mac 上构建与模拟器截图确认。

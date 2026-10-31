@@ -44,6 +44,7 @@ struct TodayView: View {
                 if environment.isMockBackend {
                     MockServiceBanner()
                 }
+                pageHeader()
                 if viewModel.isLoading && viewModel.plan == nil {
                     ProgressView("正在准备今天的内容…")
                 } else if let message = viewModel.errorMessage, viewModel.plan == nil {
@@ -64,6 +65,23 @@ struct TodayView: View {
             .frame(maxWidth: .infinity)
         }
         .toastBanner(toastBinding(of: viewModel))
+    }
+
+    /* 页首：小标签 + 标题 + 一行约定，与跨端页面保持同一层级。 */
+    private func pageHeader() -> some View {
+        VStack(alignment: .leading, spacing: AppSpacing.xxSmall) {
+            Text("今日练习")
+                .font(AppFont.helper)
+                .tracking(1.2)
+                .foregroundStyle(theme.textSecondary)
+            Text("今天练什么？")
+                .font(AppFont.title)
+                .foregroundStyle(theme.textPrimary)
+            Text("每天 10 分钟 · 只鼓励，不打分")
+                .font(AppFont.helper)
+                .foregroundStyle(theme.textSecondary)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private func modeSection(viewModel: TodayViewModel) -> some View {
