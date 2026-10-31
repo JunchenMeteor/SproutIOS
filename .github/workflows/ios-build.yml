@@ -19,4 +19,4 @@ jobs:
           xcodebuild -project Sprout.xcodeproj -scheme Sprout \
             -configuration Debug \
             -destination 'generic/platform=iOS Simulator' \
-            CODE_SIGNING_ALLOWED=NO build
+            CODE_SIGNING_ALLOWED=NO \n            OTHER_SWIFT_FLAGS='$(inherited) -enable-experimental-feature IsolatedDeinit' \n            build
