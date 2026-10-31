@@ -10,6 +10,10 @@ jobs:
     runs-on: macos-15
     steps:
       - uses: actions/checkout@v4
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: "26.0"
       - name: Install xcodegen
         run: brew install xcodegen
       - name: Generate Xcode project
@@ -20,5 +24,4 @@ jobs:
             -configuration Debug \
             -destination 'generic/platform=iOS Simulator' \
             CODE_SIGNING_ALLOWED=NO \
-            OTHER_SWIFT_FLAGS='$(inherited) -enable-experimental-feature IsolatedDeinit' \
             build
